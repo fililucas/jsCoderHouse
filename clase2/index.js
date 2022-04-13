@@ -72,3 +72,84 @@ if(nombre == "Ana"){
     console.log("No es lo mismo");
 } */
 
+/* 
+te voy a invitar al desayuno o al almuerzo
+*/
+/* 
+el operador || solo es falso cuando ambas sentencias sean falsas
+el operador && es falso cuando almenos una sentencia es falso
+*/
+/* let valor1 = true || false;
+let valor2= false || false;
+let valor3= true || true;
+
+console.log(valor1);
+console.log(valor2);
+console.log(valor3);
+
+
+
+let valor4 = false && true;
+let valor5 = true && true;
+
+console.log(valor4);
+console.log(valor5); */
+
+
+
+/* let nombre = prompt("Ingrese un nombre");
+let apellido = prompt("Ingrese un apellido");
+
+// nombre es igual a andres o nombre es igual a camila, apellido no este en blanco
+if(((nombre === "andres") || (nombre === "camila")) && (apellido != "")){
+    alert("Ingresaste un nombre valido");
+}else{
+    alert("Ingresaste algo incorrecto");
+} */
+
+/* let menu = prompt("Ingrese un numero para realizar la operacion.\n1) Suma \n2) Resta");
+if(menu == 1){
+    let primerNumeroS = prompt("Ingrese el primer numero a sumar:")
+    let segundoNumeroS = prompt("Ingrese el segundo numero a sumar:")
+    let sumaResultado = parseFloat(primerNumeroS) + parseFloat(segundoNumeroS);
+    alert(`El resultado de la resta entre ${primerNumeroS} y ${segundoNumeroS} fue: ${sumaResultado}`);
+}
+else if(menu == 2){
+    let primerNumeroR = prompt("Ingrese el primer numero a restar:")
+    let segundoNumeroR = prompt("Ingrese el segundo numero a restar:")
+    let restaResultado = parseFloat(primerNumeroR) - parseFloat(segundoNumeroR);
+    alert(`El resultado de la resta entre ${primerNumeroR} y ${segundoNumeroR} fue: ${restaResultado}`);
+}
+else if (menu =! ""){
+    alert("No pudimos encontrar la operacion.")
+}
+ */
+
+
+
+let menu = prompt("Ingrese un numero para realizar la operacion.\n1) Suma \n2) Resta \n3) Multiplicacion \n4) Division");
+if(menu == 1){
+    let primerNumero = parseFloat(prompt("Ingrese el primer numero:"));
+    let segundoNumero = parseFloat(prompt("Ingrese el segundo numero:"));
+    alert(`${primerNumero} + ${segundoNumero} = ${primerNumero + segundoNumero}`);
+}
+else if(menu == 2){
+    let primerNumero = parseFloat(prompt("Ingrese el primer numero:"));
+    let segundoNumero = parseFloat(prompt("Ingrese el segundo numero:"));
+    alert(`${primerNumero} - ${segundoNumero} = ${primerNumero - segundoNumero}`);
+}
+else if(menu == 3){
+    let primerNumero = parseFloat(prompt("Ingrese el primer numero:"));
+    let segundoNumero = parseFloat(prompt("Ingrese el segundo numero:"));
+    alert(`${primerNumero} * ${segundoNumero} = ${primerNumero * segundoNumero}`);
+}
+else if(menu == 4){
+    let primerNumero = parseFloat(prompt("Ingrese el primer numero:"));
+    let segundoNumero = parseFloat(prompt("Ingrese el segundo numero:"));
+    alert(`${primerNumero} / ${segundoNumero} = ${primerNumero / segundoNumero}`);
+}
+else{
+    alert("No entendi la operacion.");
+}
+
+
