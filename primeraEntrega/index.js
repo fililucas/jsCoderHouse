@@ -19,7 +19,7 @@ if (contrasena == "") {
 }
 
 
-alert("A continuación podra hacer inicio se sesion con el usuario y contraseña registrados.")
+alert("A continuación podra hacer inicio se sesion con el usuario y contraseña registrados.");
 
 login = usuario + contrasena;
 
@@ -29,12 +29,12 @@ switch (login) {
         let loginUser = prompt("Por favor, inicie sesion con su usuario:");
         let loginContrasena = prompt("Por favor, escriba su contraseña:");
         if ((loginUser + loginContrasena) == (login)) {
-            alert("Iniciaste sesion de forma correcta");
+            alert(`Iniciaste sesion de forma satisfactoria ${loginUser}.`);
         } else {
             alert("No has podido ingresar al sistema de forma correcta, por favor intentelo nuevamente.");
             break;
         }
-        let menu = parseInt(prompt(`Un placer verte nuevamente "${loginUser}" \nBienvenido al menu, por favor seleccione que quiere hacer.\nEscriba la respuesta por favor.(numero)\n1) Cambiar usuario \n2) Cambiar contraseña \n3) Salir. `));
+        let menu = parseInt(prompt(`'${loginUser}' \nUn placer verte nuevamente. \nBienvenido al menu, por favor seleccione que quiere hacer.\nEscriba la respuesta por favor.(numero)\n1) Cambiar usuario \n2) Cambiar contraseña \n3) Salir. `));
         if (menu == 1) {
             let userCambio = prompt("Por favor, introduzca el nuevo usuario");
             loginUser = userCambio
@@ -45,7 +45,7 @@ switch (login) {
         } else if (menu == 3) {
             alert("Gracias por utilizar nuestro sistema de login.");
         } else if (menu = ! "") {
-            alert("Por favor, escribe algun valor valido.")
+            alert("Por favor, escribe algun valor valido.");
         }
 
         break;
