@@ -4,12 +4,10 @@ let usuariosRegistrados2 = "ramon";
 let usuario = prompt("Bienvenido al sistema de registro.\nPor favor ingrese un nombre de usuario valido:");
 
 
-while (usuario) {
-    if ((usuario == usuariosRegistrados) || (usuario == usuariosRegistrados2)) {
+
+while ((usuario == usuariosRegistrados) || (usuario == usuariosRegistrados2)) {
         usuario = prompt("No se pudo registrar ese nombre de usuario, se encuentra en uso. \nPor favor, ingrese otro nombre de usuario:");
         break;
-    }
-    break;
 }
 
 
