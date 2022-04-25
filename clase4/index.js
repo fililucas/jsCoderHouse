@@ -37,7 +37,7 @@ console.log("El resultado es ", resultado); */
 
 
 
-function calculadora(num1, operacion, num2) {
+/* function calculadora(num1, operacion, num2) {
     switch (operacion) {
         case "+":
             return num1 + num2;
@@ -60,4 +60,25 @@ function calculadora(num1, operacion, num2) {
 
 let resultado = calculadora(10,"/", 2);
 
-console.log(resultado);
+console.log(resultado); */
+
+/* 
+const suma = function(a,b) {
+    return a + b;
+}
+
+const resta = function (a, b) {
+    return a - b;
+}
+
+
+console.log(suma(3,4));
+console.log(resta(3,4)); */
+
+
+/* const suma = (a, b) => a + b;
+const resta = (a, b) => {return a - b};
+
+console.log(suma(3,4));
+console.log(resta(3,4)); */
+
