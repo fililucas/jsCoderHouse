@@ -80,7 +80,6 @@ while ((login.usernameL === register.username) && (login.passwordL === register.
             passwordL = prompt("Por favor, introduzca la nueva contraseña");
             alert(`El usuario; "${usernameL}" \nContraseña; "${passwordL}" \nFue actualizado satisfactoriamente.`);
             break;
-
         default:
             alert("Marque una opción valida, por favor.");
             break;
