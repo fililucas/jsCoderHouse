@@ -9,20 +9,20 @@ class Producto {
 
 // Array con, id, juego y el precio.
 const productos = [
-    { id: 0, juego: "Far Cry 3", precio: 600 },
-    { id: 1, juego: "Gta 4", precio: 1500 },
-    { id: 2, juego: "Gta 5", precio: 2200 },
-    { id: 3, juego: "Sims 3", precio: 700 },
-    { id: 4, juego: "Battlefield 4", precio: 1100 },
-    { id: 5, juego: "Smite", precio: 0 },
-    { id: 6, juego: "Lol", precio: 0 },
-    { id: 7, juego: "CSGO", precio: 0 },
-    { id: 8, juego: "Call of duty", precio: 1400 },
-    { id: 9, juego: "Assetto Corsa", precio: 550 },
-    { id: 10, juego: "Need for speed", precio: 350 },
-    { id: 11, juego: "Payday2", precio: 400 },
-    { id: 12, juego: "Resident Evil 4", precio: 500 },
-    { id: 13, juego: "Resident Evil 5", precio: 750 }];
+    { id: 0, juego: "far Cry 3", precio: 600 },
+    { id: 1, juego: "gta 4", precio: 1500 },
+    { id: 2, juego: "gta 5", precio: 2200 },
+    { id: 3, juego: "sims 3", precio: 700 },
+    { id: 4, juego: "battlefield 4", precio: 1100 },
+    { id: 5, juego: "smite", precio: 0 },
+    { id: 6, juego: "lol", precio: 0 },
+    { id: 7, juego: "csgo", precio: 0 },
+    { id: 8, juego: "call of duty", precio: 1400 },
+    { id: 9, juego: "assetto corsa", precio: 550 },
+    { id: 10, juego: "need for speed", precio: 350 },
+    { id: 11, juego: "payday2", precio: 400 },
+    { id: 12, juego: "resident evil 4", precio: 500 },
+    { id: 13, juego: "resident evil 5", precio: 750 }];
 
 // hago uso del constructor para crear un objeto nuevo al array
 const juegoNuevo = new Producto(14, prompt("Diga el juego que quiere agregar:"), prompt("Escriba el precio del juego:"));
@@ -38,7 +38,7 @@ for (const juego of productos) {
 }
 
 // obtengo un dato "buscador"
-let buscador = prompt("Nombre del juego que quieres buscar:");
+let buscador = prompt("Nombre del juego que quieres buscar:").toLowerCase();
 
 // creo una variable donde almaceno un dato y chequeo en la misma mediante un filtro si se encuentra en el array productos
 const resultado = productos.filter((element) => element.juego.includes(buscador)).map((juego) => juego.juego);
