@@ -9,12 +9,12 @@ document.body.append(bodyNombre);
 
 // busco el body
 let HTMLCollection = document.getElementsByTagName("body");
+
 // me posiciono en el body para agregar mas adelante una clase
 let body = HTMLCollection[0];
 
-
 // obtengo un dato
-let colorFondo = prompt("¿Que color quieres ver el fondo? \nazul \nrojo \nvioleta \nnegro \nblanco");
+let colorFondo = prompt("¿Que color quieres ver el fondo? \nazul \nrojo \nvioleta \nnegro \nblanco").toLowerCase();
 // hago uso del dato para cambiar el color de fondo
 if (colorFondo == "azul") {
     body.className = "azul"
