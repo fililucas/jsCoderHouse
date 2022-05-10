@@ -1,11 +1,11 @@
 //creo un constructor para luego almacenarlos en el array
-class Producto {
+/* class Producto {
     constructor(id, juego, precio) {
         this.id = id;
         this.juego = juego;
         this.precio = parseFloat(precio);
     }
-}
+} */
 
 // Array con, id, juego y el precio.
 const productos = [
@@ -25,7 +25,7 @@ const productos = [
     { id: 13, juego: "resident evil 5", precio: 750 }];
 
 // hago uso del constructor para crear un objeto nuevo al array
-const juegoNuevo = new Producto(14, prompt("Diga el juego que quiere agregar:"), prompt("Escriba el precio del juego:"));
+/* const juegoNuevo = new Producto(14, prompt("Diga el juego que quiere agregar:"), prompt("Escriba el precio del juego:"));
 
 //ingreso el dato obtenido mediante el prompt anterior y lo guardo dentro del array.
 productos.push(juegoNuevo);
@@ -41,13 +41,38 @@ for (const juego of productos) {
 let buscador = prompt("Nombre del juego que quieres buscar:").toLowerCase();
 
 // creo una variable donde almaceno un dato y chequeo en la misma mediante un filtro si se encuentra en el array productos
-const resultado = productos.filter((element) => element.juego.includes(buscador)).map((juego) => juego.juego);
-if (resultado == "") {
+const resultados = productos.filter((element) => element.juego.includes(buscador)).map((juego) => juego.juego);
+if (resultados == "") {
     //si en el resultado no encuentra nada, avisa que no se encontro coincidencias.
     alert("No hemos encontrado coincidencias.");
 } else {
     //si en el resultado se encuentran datos, los imprime en un alert
-    alert("Sus coincidencias son: " + resultado);
+    alert("Sus coincidencias son: " + resultados);
 }
 
-console.log(resultado);
+console.log(resultados); */
+
+
+/* let nombre = document.createElement("p");
+nombre.innerHTML = "<h1>Pepe</h1>"
+document.body.append(nombre); */
+
+let resultado = document.getElementById("resultado")
+let buscador = document.getElementById("buscador");
+
+
+function validarFormulario(e) {
+    e.preventDefault();
+    console.log(e.target.children[0].value);
+    let busqueda = e.target.children[0].value;
+    const resultados = productos.filter((element) => element.juego.includes(busqueda)).map((juego) => juego.juego);
+    resultado.append(`Tu busqueda es: "${busqueda}" Resultados: ${resultados}`);
+}
+
+
+for (const juego of productos) {
+    let rr = [`Juego: ${juego.juego}\n Precio: ${juego.precio}`];
+    resultado.append(rr)
+}
+
+buscador.addEventListener("submit", validarFormulario);
