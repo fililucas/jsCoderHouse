@@ -57,8 +57,10 @@ console.log(resultados); */
 nombre.innerHTML = "<h1>Pepe</h1>"
 document.body.append(nombre); */
 
-let resultado = document.getElementById("resultado")
+let resultado = document.getElementById("resultado");
 let buscador = document.getElementById("buscador");
+let textoBusqueda = document.getElementById("busqueda");
+
 
 
 function validarFormulario(e) {
@@ -67,12 +69,18 @@ function validarFormulario(e) {
     let busqueda = e.target.children[0].value;
     const resultados = productos.filter((element) => element.juego.includes(busqueda)).map((juego) => juego.juego);
     resultado.append(`Tu busqueda es: "${busqueda}" Resultados: ${resultados}`);
+    buscador.reset(textoBusqueda);
 }
 
 
 for (const juego of productos) {
-    let rr = [`Juego: ${juego.juego}\n Precio: ${juego.precio}`];
-    resultado.append(rr)
+    let lista = [`Juego: ${juego.juego}\n Precio: ${juego.precio}`];
+    resultado.append(lista);
 }
 
 buscador.addEventListener("submit", validarFormulario);
+console.log(buscador.innerHTML);
+
+
+
+
