@@ -79,7 +79,6 @@ for (const juego of productos) {
 }
 
 buscador.addEventListener("submit", validarFormulario);
-console.log(buscador.innerHTML);
 
 
 
